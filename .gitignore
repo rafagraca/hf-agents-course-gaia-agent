@@ -1,0 +1,57 @@
+# Python
+.venv/
+__pycache__/
+*.egg-info/
+
+# Test, coverage and lint caches
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# Secrets and local data: benchmark material and run outputs must never be committed.
+# The real data lives outside the repository (see gaia_agent/config.py); this is the net under that rule, for a
+# folder that ends up here by mistake and for a careless "git add -A".
+.env
+.env.*
+data/
+runs/
+cache/
+gaia/
+tmp/
+traces/
+.cache/
+
+# Run outputs and benchmark files, whatever their name
+answers.jsonl
+usage.jsonl
+submission.json
+evaluation.json
+questions*.json
+metadata.*
+*.jsonl
+*.parquet
+
+# Attachment types of the benchmark (the files of the questions are never part of the code)
+*.mp3
+*.wav
+*.m4a
+*.flac
+*.ogg
+*.mp4
+*.webm
+*.xlsx
+*.xls
+*.csv
+*.pdf
+*.docx
+*.pptx
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.npy
+*.part
