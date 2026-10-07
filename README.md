@@ -245,14 +245,23 @@ is in the repository.
 
 <!-- RESULTS: fill in after the submission. Score and date only; never a per-question answer. -->
 
-To be filled in after the submission:
-
 | | |
 | --- | --- |
-| Tag submitted | _(tag)_ |
-| Score | _(score)_ |
-| Submitted on | _(date)_ |
-| Main model | _(model)_ |
+| Tag submitted | `v1.0.0` |
+| Score | **75% (15 of 20 correct)**, as returned by the course's scoring API |
+| Submitted on | 6 October 2026 |
+| Models | `qwen/qwen3.8-27b` (17 answers) and `openai/gpt-oss-120b` (3 answers, as the fallback) |
+| Certificate | Certificate of Excellence of the Hugging Face Agents Course, claimed on 7 October 2026 |
+
+How the final run went:
+
+* It started on the tagged commit and was resumed four times without any change to the code. The five attachments
+  became available once the GAIA terms were accepted (the scoring API still answers 404 for them), and the Python
+  attachment was run only after it had been read (`GAIA_ALLOW_RUN_PYTHON=1`, recorded in `run.json`).
+* Groq briefly refused small requests as "too large", quoting a limit of 1,000 tokens. Version 1.0.0 treats that as a
+  permanent error: three questions failed and were answered on a later resume, and one audio question was answered
+  without its transcript. A later version should treat such refusals as temporary.
+* One video has no captions, so the agent could only guess its answer.
 
 ## Credits
 
